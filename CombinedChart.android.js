@@ -37,6 +37,7 @@ CombinedChart.propTypes = {
     touchEnabled:PropTypes.bool,
     dragEnabled:PropTypes.bool,
     scaleEnabled:PropTypes.bool,
+    moveViewToX:PropTypes.number,
     scaleXEnabled:PropTypes.bool,
     scaleYEnabled:PropTypes.bool,
     pinchZoom:PropTypes.bool,
@@ -51,7 +52,9 @@ CombinedChart.propTypes = {
     backgroundColor:PropTypes.string,
     drawGridBackground:PropTypes.bool,
     gridBackgroundColor:PropTypes.string,
+    setVisibleYRangeMaximum:PropTypes.number,
     visibleXRange:PropTypes.array,
+    moveViewTo:PropTypes.array,
     borderColor:PropTypes.string,
     borderWidth:PropTypes.number,
     xAxis:PropTypes.object,
@@ -74,6 +77,7 @@ CombinedChart.propTypes = {
     accessibilityLabel: React.PropTypes.string,
     testID: React.PropTypes.string,
     viewCenter: React.PropTypes.array,
+    moveViewTo: React.PropTypes.array,
     zoomTo: PropTypes.object,
     extraOffsets: PropTypes.string
 };

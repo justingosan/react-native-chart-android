@@ -18,6 +18,7 @@ LineChart.propTypes = {
     data:PropTypes.object,
     touchEnabled:PropTypes.bool,
     dragEnabled:PropTypes.bool,
+    moveViewToX:PropTypes.number,
     scaleEnabled:PropTypes.bool,
     scaleXEnabled:PropTypes.bool,
     scaleYEnabled:PropTypes.bool,
@@ -33,7 +34,9 @@ LineChart.propTypes = {
     backgroundColor:PropTypes.string,
     drawGridBackground:PropTypes.bool,
     gridBackgroundColor:PropTypes.string,
+    setVisibleYRangeMaximum:PropTypes.number,
     visibleXRange:PropTypes.array,
+    moveViewTo:PropTypes.array,
     borderColor:PropTypes.string,
     borderWidth:PropTypes.number,
     xAxis:PropTypes.object,
@@ -44,6 +47,7 @@ LineChart.propTypes = {
     chartPadding:PropTypes.string,
     legend:PropTypes.object,
     viewCenter: PropTypes.array,
+    moveViewTo: React.PropTypes.array,
     zoomTo: PropTypes.object,
     extraOffsets: PropTypes.string
 }

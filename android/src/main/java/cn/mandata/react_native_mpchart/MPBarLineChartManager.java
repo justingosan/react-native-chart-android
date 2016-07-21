@@ -286,7 +286,10 @@ public class MPBarLineChartManager extends SimpleViewManager<BarLineChartBase> {
     @ReactProp(name="visibleXRange")
       public  void  setVisibleXRange(BarLineChartBase chart,ReadableArray v){
         chart.setVisibleXRange((float) v.getDouble(0), (float) v.getDouble(1));
-
+    }
+    @ReactProp(name="setVisibleYRangeMaximum")
+      public  void  setVisibleYRangeMaximum(BarLineChartBase chart,double v){
+        chart.setVisibleYRangeMaximum((float) v, AxisDependency.LEFT);
     }
     @ReactProp(name="chartPadding")
     public  void  setPadding(BarLineChartBase chart,String v){
@@ -373,5 +376,15 @@ public class MPBarLineChartManager extends SimpleViewManager<BarLineChartBase> {
     @ReactProp(name="viewCenter")
     public void setViewCenter(BarLineChartBase chart, ReadableArray v){
         chart.centerViewTo(v.getInt(0), (float) v.getDouble(1), AxisDependency.LEFT);
+    }
+
+    @ReactProp(name="moveViewTo")
+    public void moveViewTo(BarLineChartBase chart, ReadableArray v){
+        chart.moveViewTo(v.getInt(0), (float) v.getDouble(1), AxisDependency.LEFT);
+    }
+
+    @ReactProp(name="moveViewToX")
+    public void moveViewToX(BarLineChartBase chart, double v){
+        chart.moveViewToX((float) v);
     }
 }

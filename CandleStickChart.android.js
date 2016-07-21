@@ -18,6 +18,7 @@ CandleStickChart.propTypes = {
     data:PropTypes.object,
     touchEnabled:PropTypes.bool,
     dragEnabled:PropTypes.bool,
+    moveViewToX:PropTypes.number,
     scaleEnabled:PropTypes.bool,
     scaleXEnabled:PropTypes.bool,
     scaleYEnabled:PropTypes.bool,
@@ -33,6 +34,8 @@ CandleStickChart.propTypes = {
     backgroundColor:PropTypes.string,
     drawGridBackground:PropTypes.bool,
     gridBackgroundColor:PropTypes.string,
+    setVisibleYRangeMaximum:PropTypes.number,
+    moveViewTo:PropTypes.array,
     visibleXRange:PropTypes.array,
     borderColor:PropTypes.string,
     borderWidth:PropTypes.number,
@@ -56,6 +59,7 @@ CandleStickChart.propTypes = {
     accessibilityLabel: React.PropTypes.string,
     testID: React.PropTypes.string,
     viewCenter: React.PropTypes.array,
+    moveViewTo: React.PropTypes.array,
     zoomTo: PropTypes.object,
     extraOffsets: PropTypes.string
   }
